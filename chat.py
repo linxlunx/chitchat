@@ -639,6 +639,7 @@ class Chat:
 						sock.close()
 						self.CONNECTION_LIST.remove(sock)
 						continue
+			# We need sleep here, so the application won't eat high cpu and memory resources when doing forever loop
 			time.sleep(0.2)
 
 		self.server_socket.close()
